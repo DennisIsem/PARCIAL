@@ -1,41 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Docker & Kubernetes – Guía rápida</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <header>
-        <h1>¡Bienvenido a Nuestra Página!</h1>
-        <p>Nos alegra que estés aquí</p>
-    </header>
+  <header class="site-header">
+    <div class="container">
+      <h1>Docker & Kubernetes</h1>
+      <p class="subtitle">Conceptos clave y comparación esencial para desarrollo y despliegue</p>
+    </div>
+  </header>
 
-    <main>
-        <h2>Información Relevante</h2>
-        <table>
-            <tr>
-                <th>Dato</th>
-                <th>Descripción</th>
-            </tr>
-            <tr>
-                <td>Horario</td>
-                <td>Lunes a Viernes - 8:00 AM a 5:00 PM</td>
-            </tr>
-            <tr>
-                <td>Ubicación</td>
-                <td>Cobán, Alta Verapaz</td>
-            </tr>
-            <tr>
-                <td>Contacto</td>
-                <td>info@ejemplo.com</td>
-            </tr>
-        </table>
-    </main>
+  <main class="container">
+    <section class="card">
+      <h2>Resumen</h2>
+      <p>
+        <strong>Docker</strong> empaqueta aplicaciones y dependencias en contenedores ligeros.
+        <strong>Kubernetes</strong> orquesta y escala esos contenedores en clústeres de nodos.
+      </p>
+    </section>
 
-    <footer>
-        <p>© 2025 - Todos los derechos reservados</p>
-    </footer>
+    <section class="card">
+      <h2>Datos relevantes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tema</th>
+            <th>Docker</th>
+            <th>Kubernetes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Propósito</td>
+            <td>Construcción, empaquetado y ejecución de contenedores</td>
+            <td>Orquestación: despliegue, escalado, auto-reparación</td>
+          </tr>
+          <tr>
+            <td>Componentes clave</td>
+            <td>Imagen, Dockerfile, Contenedor, Volumen</td>
+            <td>Pod, Deployment, Service, Ingress, Namespace</td>
+          </tr>
+          <tr>
+            <td>Casos de uso</td>
+            <td>Dev local, CI/CD, microservicios simples</td>
+            <td>Alta disponibilidad, balanceo, rolling updates</td>
+          </tr>
+          <tr>
+            <td>Escalabilidad</td>
+            <td>Manual (docker compose replicas)</td>
+            <td>Automática (HPA), clúster multi-nodo</td>
+          </tr>
+          <tr>
+            <td>Comandos típicos</td>
+            <td><code>docker build/run/logs</code></td>
+            <td><code>kubectl apply/get/describe</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Flujo básico con Docker</h3>
+        <ol>
+          <li>Escribe un <code>Dockerfile</code>.</li>
+          <li><code>docker build -t miapp:1.0 .</code></li>
+          <li><code>docker run -p 8080:80 miapp:1.0</code></li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h3>Despliegue básico en K8s</h3>
+        <ol>
+          <li>Define <code>deployment.yaml</code> y <code>service.yaml</code>.</li>
+          <li><code>kubectl apply -f deployment.yaml</code></li>
+          <li><code>kubectl get pods,svc</code></li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="note">
+      Consejo: usa <strong>Docker</strong> para empaquetar y probar rápidamente; pasa a
+      <strong>Kubernetes</strong> cuando necesites resiliencia, escalado y actualizaciones sin caída.
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 | Primer Parcial Desarrollo Web - Dennis Isem</small>
+    </div>
+  </footer>
 </body>
 </html>
