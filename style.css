@@ -1,12 +1,12 @@
-/* ====== Tokens de diseño (paleta neutra) ====== */
+
 :root{
   --bg:#f6f7fb;
   --surface:#ffffff;
   --text:#1f2937;
   --muted:#64748b;
   --line:#e5e7eb;
-  --accent:#3b82f6;      /* azul suave para detalles */
-  --accent-soft:#eef4ff; /* fondo para hovers sutiles */
+  --accent:#3b82f6;
+  --accent-soft:#eef4ff;
 }
 
 *{box-sizing:border-box}
@@ -18,7 +18,7 @@ body{
   line-height:1.6;
 }
 
-/* ====== Contenedor y rejilla ====== */
+
 .container{max-width: 920px; margin: 0 auto; padding: 0 16px}
 .grid{
   display:grid;
@@ -26,7 +26,6 @@ body{
   grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
 }
 
-/* ====== Header (gradiente muy sutil) ====== */
 .site-header{
   background: linear-gradient(180deg, #ffffff 0%, #f7f9ff 100%);
   border-bottom:1px solid var(--line);
@@ -43,7 +42,7 @@ body{
   font-size:.98rem;
 }
 
-/* ====== Tarjetas ====== */
+
 .card{
   background:var(--surface);
   border:1px solid var(--line);
@@ -58,7 +57,6 @@ body{
 }
 .card h2,.card h3{margin-top:0}
 
-/* ====== Iconos sutiles (sin cambiar HTML) ====== */
 .lead h2::before{
   content:"🧰";
   margin-right:.5rem;
@@ -76,7 +74,6 @@ body{
   margin-right:.5rem;
 }
 
-/* ====== Tabla elegante ====== */
 table{
   width:100%;
   border-collapse:separate;
@@ -96,7 +93,7 @@ td, th{padding:12px; vertical-align:top}
 tbody tr + tr td{border-top:1px solid var(--line)}
 tbody tr:hover{background:var(--accent-soft)}
 
-/* ====== Nota ====== */
+
 .note{
   margin:16px 0 24px;
   padding:12px 14px;
@@ -106,7 +103,7 @@ tbody tr:hover{background:var(--accent-soft)}
   border-radius:8px;
 }
 
-/* ====== Tipografía y detalles ====== */
+
 h2{font-size:1.25rem}
 h3{font-size:1.05rem}
 code{
@@ -117,7 +114,7 @@ code{
   font-size:.92em;
 }
 
-/* ====== Footer ====== */
+
 .site-footer{
   border-top:1px solid var(--line);
   background:#fff;
